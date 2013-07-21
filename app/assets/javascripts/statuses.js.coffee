@@ -4,4 +4,4 @@
 
 $ ->
 	$('.status').hover (event) ->
-		$(this).toggleClassgit("hover")
+		$(this).toggleClass ("hover")

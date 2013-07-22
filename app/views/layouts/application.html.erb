@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Treebook</title>
+  <title>CatChat</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="#" class="brand">Treebook</a>
-				<ul class="nav nav-pills">
-					<li class="active"><%= link_to "All Statuses", statuses_path %></li>
+				<a href="#" class="brand"><img src="/assets/catchaticon.png" style="height: 35px; margin-right: 5px;">CatChat</a>
+				<ul class="nav" style="font-size: 1.2em">
+					<li ><%= link_to "All Statuses", statuses_path %></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">More Stuff</a></li>
 				</ul>
-				<ul class="nav pull-right">
+				<ul class="nav pull-right" style="font-size: 1.2em">
 					<% if user_signed_in? %>
 						<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
 						<li><%= link_to "Log out", logout_path %></li>
@@ -35,7 +35,6 @@
 				<a class="close pull-right" data-dismiss="alert" href="#">x</a>
 			</div>
 		<% end %>
-
 		<%= yield %>
 	</div>
 </body>
